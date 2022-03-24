@@ -13,6 +13,7 @@ task:
       - sudo apt-get install gpg
       - sudo apt-get update
       - sudo apt-get upgrade
+      - sudo apt-get clean
       - sleep 2m
     download_ccache_background_script: # To download ccache in background
       - bash download_ccache # Ccache download script
