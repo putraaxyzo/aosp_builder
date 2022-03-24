@@ -1,2 +1,5 @@
-# low
-Its for me to test rom sync and build
+
+Script for build rom
+Creadit
+@apon77
+And other
