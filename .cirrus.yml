@@ -1,0 +1,24 @@
+env:
+    CIRRUS_CLONE_DEPTH: 1
+    CIRRUS_WORKING_DIR: "/tmp/ci"
+    #13
+task:
+    name: Anyinglulu
+    timeout_in: 130m
+    container:
+      image: aarunalr/aosp-build
+      cpu: 8
+      memory: 32g
+      commands:
+      - sudo apt-get install gpg
+      - sudo apt-get update
+      - sudo apt-get upgrade
+      - sleep 2m
+    download_ccache_background_script: # To download ccache in background
+      - bash download_ccache # Ccache download script
+    sync_script: # To sync rom source and dt, vt, kernel etc.
+      - bash sync # Sync script
+    build_script: # To build rom
+      - bash build # Rom build script
+    upload_ccache_script: # Upload ccache to cloud foreground
+      - bash upload_ccache # Ccache uploading script
