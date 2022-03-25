@@ -3,7 +3,7 @@ cd /tmp/rom
 
 # Normal build steps
 . build/envsetup.sh
-lunch fluid_mido-userdebug
+lunch cherish_juice-eng
 export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
 export USE_CCACHE=1
@@ -42,7 +42,7 @@ tg(){
 id=-#
 
 # compile plox
-make bacon -j8 &
+brunch juice &
 sleep 10m
 kill %1
 
