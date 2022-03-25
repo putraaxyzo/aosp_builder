@@ -16,8 +16,6 @@ make sepolicy || echo no problem, we need ccache
 make bootimage || echo no problem we need ccache
 make init || echo no problem, we need ccache
 make bacon -j10 & # dont remove that '&'
-sleep 5m
-kill %1
 ccache -s
 #and dont use below codes for first 1 or 2 times, to get ccache uploaded,
 
@@ -40,11 +38,6 @@ tg(){
 }
 
 id=-#
-
-# compile plox
-make bacon -j8 &
-sleep 10m
-kill %1
 
 
 # Upload rom zip file if succeed to build! Send notification to tg! And send shell to tg if build fails!
