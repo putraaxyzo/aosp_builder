@@ -3,7 +3,6 @@
 mkdir -p /tmp/rom # Where to sync source
 cd /tmp/rom
 
-
 # Repo init command
 repo init -q --no-repo-verify --depth=1 -u https://github.com/Project-Fluid/manifest -b fluid-12 -g default,-mips,-darwin,-notdefault
 
