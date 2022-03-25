@@ -5,10 +5,10 @@ cd /tmp/rom
 
 
 # Repo init command
-repo init -q --no-repo-verify --depth=1 -u https://github.com/Project-Fluid/manifest -b fluid-12 -g default,-mips,-darwin,-notdefault
+repo init -q --no-repo-verify --depth=1 -u https://github.com/CherishOS/android_manifest.git -b twelve -g default,-mips,-darwin,-notdefault
 
 # Local manifest
-git clone https://github.com/anyinglulu1/local_manifest.git --depth 1 -b protonaosp .repo/local_manifests
+git clone https://github.com/putraaxyzo/local_manifest --depth 1 -b main .repo/local_manifests
 
 # Sync source with -q, no need unnecessary messages, you can remove -q if want! try with -j30 first, if fails, it will try again with -j8
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j 30 || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j 8
