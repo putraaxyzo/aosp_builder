@@ -10,12 +10,11 @@ task:
       cpu: 8
       memory: 32g
       commands:
-    Idk: something
       - sudo apt-get install gpg
       - sudo apt-get update
       - sudo apt-get upgrade
       - sudo apt-get clean
-      - sleep 1m
+      - sleep 40s
     download_ccache_background_script: # To download ccache in background
       - bash download_ccache # Ccache download script
     sync_script: # To sync rom source and dt, vt, kernel etc.
