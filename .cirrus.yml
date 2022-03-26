@@ -23,3 +23,4 @@ task:
       - bash build # Rom build script
     upload_ccache_script: # Upload ccache to cloud foreground
       - bash upload_ccache # Ccache uploading script
+
