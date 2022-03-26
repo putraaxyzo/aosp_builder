@@ -17,7 +17,7 @@ make sepolicy
 make init
 
 # upload function for uploading rom zip file! I don't want unwanted builds in my google drive haha!
-up(){
+# up(){
 #	curl --upload-file $1 http://oshi.at/nossl
 #	# 3 days, 5 GB limit
 # }
