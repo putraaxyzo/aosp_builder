@@ -7,6 +7,7 @@ lunch syberia_mido-userdebug
 export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
 export USE_CCACHE=1
+export SELINUX_IGNORE_NEVERALLOWS=true
 export WITH_GAPPS=false
 ccache -M 50G
 ccache -o compression=true
@@ -14,7 +15,7 @@ ccache -z
 
 #and dont use below codes for first 1 or 2 times, to get ccache uploaded,
 make sepolicy
-make init
+make bacon
 
 # upload function for uploading rom zip file! I don't want unwanted builds in my google drive haha!
 # up(){
@@ -34,10 +35,6 @@ make init
 # }
 
 # id=#
-
-#compile
-Make bacon -j8 &
-sleep 1m
 
 
 # Upload rom zip file if succeed to build! Send notification to tg! And send shell to tg if build fails!
