@@ -8,13 +8,14 @@ export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
 export USE_CCACHE=1
 export SELINUX_IGNORE_NEVERALLOWS=true
-export WITH_GAPPS=false
-ccache -M 50G
+ccache -M 10G
 ccache -o compression=true
 ccache -z
 
 #and dont use below codes for first 1 or 2 times, to get ccache uploaded,
-make bacon
+make sepolicy
+make init
+make bootimage
 
 # upload function for uploading rom zip file! I don't want unwanted builds in my google drive haha!
 # up(){
