@@ -16,6 +16,8 @@ ccache -z
 make sepolicy
 make bootimage
 make init
+make overlay
+make bacon -j8
 
 # upload function for uploading rom zip file! I don't want unwanted builds in my google drive haha!
 # up(){
