@@ -3,7 +3,7 @@ cd /tmp/rom
 
 # Normal build steps
 . build/envsetup.sh
-lunch corvus_mido-userdebug
+lunch radiant_mido-userdebug
 export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
 export USE_CCACHE=1
@@ -17,7 +17,7 @@ make sepolicy
 make bootimage
 make init
 make clean
-make bacon -j8
+make bacon 
 
 # upload function for uploading rom zip file! I don't want unwanted builds in my google drive haha!
 # up(){
