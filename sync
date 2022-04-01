@@ -4,7 +4,7 @@ mkdir -p /tmp/rom # Where to sync source
 cd /tmp/rom
 
 # Repo init command
-repo init -q --no-repo-verify --depth 1 -u https://github.com/Corvus-R/android_manifest.git -b 12 -g default,-mips,-darwin,-notdefault
+repo init -q --no-repo-verify --depth 1 -u https://github.com/ProjectRadiant/manifest -b twelve -g default,-mips,-darwin,-notdefault
 
 # Local manifest
 git clone https://github.com/anyinglulu1/local_manifest.git --depth 1 -b corvus .repo/local_manifests
