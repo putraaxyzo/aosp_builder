@@ -3,11 +3,10 @@ cd /tmp/rom
 
 # Normal build steps
 . build/envsetup.sh
-lunch radiant_mido-userdebug
+lunch aosp_juice-user
 export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
 export USE_CCACHE=1
-export SELINUX_IGNORE_NEVERALLOWS=true
 ccache -M 10G
 ccache -o compression=true
 ccache -z
@@ -26,7 +25,7 @@ brunch mido
 #}
 
 # tg(){
-# 	bot_api=#134517345:AAGG7XkCQ1wSUEhl-gcXWc69KLttneMSt0c
+# 	bot_api=#5176662048:AAG8r7foiKyMGbvUNncqzg1t1QwdDSz4OTA
 #	your_telegram_id=$1
 #	msg=$2	curl -s "https://api.telegram.org/bot${bot_api}/sendmessage" --data "text=$msg&chat_id=${your_telegram_id}"
 # }
@@ -35,8 +34,8 @@ brunch mido
 
 
 # Upload rom zip file if succeed to build! Send notification to tg! And send shell to tg if build fails!
-if [ -e out/target/product/mido/lineage.*.zip ]; then
-send_zip=$(up out/target/product/mido/lineage.*.zip) && tg $id "Build Succeed!
+if [ -e out/target/product/juice/pixel.*.zip ]; then
+send_zip=$(up out/target/product/juice/pixel.*.zip) && tg $id "Build Succeed!
 $send_zip"
 fi
 ccache -s # Let's print ccache statistics finally
