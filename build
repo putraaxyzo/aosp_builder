@@ -3,7 +3,7 @@ cd /tmp/rom
 
 # Normal build steps
 . build/envsetup.sh
-lunch aosp_juice-user
+lunch aosp_juice-userdebug
 export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
 export USE_CCACHE=1
@@ -12,7 +12,7 @@ ccache -o compression=true
 ccache -z
 
 #and dont use below codes for first 1 or 2 times, to get ccache uploaded,
-brunch mido
+mka bacon
 # upload function for uploading rom zip file! I don't want unwanted builds in my google drive haha!
 # up(){
 #	curl --upload-file $1 http://oshi.at/nossl
